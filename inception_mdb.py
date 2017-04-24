@@ -531,8 +531,7 @@ def process_images(fn, images=None, image_paths=None):
     result = [None] * num_images
 
     # For each input image.
-    for i in range(100):
-    # for i in range(num_images):
+    for i in range(num_images):
         # Status-message. Note the \r which means the line should overwrite itself.
         msg = "\r- Processing image: {0:>6} / {1}".format(i+1, num_images)
 
