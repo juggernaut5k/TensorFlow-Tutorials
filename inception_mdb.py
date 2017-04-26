@@ -257,7 +257,9 @@ class Inception:
     # tensor_name_transfer_layer = "pool_3:0"
     tensor_name_transfer_layer = "mixed_2/join:0"
 
-    def __init__(self):
+    def __init__(self, tensor_name_transfer_layer=None):
+        if tensor_name_transfer_layer is not None:
+            self.tensor_name_transfer_layer = tensor_name_transfer_layer
         # Mappings between class-numbers and class-names.
         # Used to print the class-name as a string e.g. "horse" or "plant".
         self.name_lookup = NameLookup()
